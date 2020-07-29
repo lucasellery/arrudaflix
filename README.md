@@ -70,3 +70,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Structure
 
 JSX = [J]ava[S]cript [X]ML (Javascript + HTML)
+
+### Desafios:
+
+- [] Botar o jogo na página 404
+- [] Aprender css com a Juliana
+- [] Artigo CSS do Marco 
