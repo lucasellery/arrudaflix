@@ -75,4 +75,5 @@ JSX = [J]ava[S]cript [X]ML (Javascript + HTML)
 
 - [] Botar o jogo na página 404
 - [] Aprender css com a Juliana
-- [] Artigo CSS do Marco 
+- [] Artigo CSS do Marco
+- [] ajeitar o Carousel

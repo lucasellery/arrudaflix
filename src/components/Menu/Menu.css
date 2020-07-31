@@ -21,8 +21,8 @@ max-width: 105px;
     right: 0;
     padding-left: 5%;
     padding-right: 5%;
-    background: var(--black);
-    border-bottom: 2px solid var(--primary);
+    background: rgb(0, 0, 0);
+    border-bottom: 2px solid #0068FF;
 }
 
 body {
