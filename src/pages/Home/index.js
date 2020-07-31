@@ -13,7 +13,7 @@ function Home() {
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
+        videoDescription={"Em Isaías 52, um mensageiro chega para anunciar as Boas Novas de que Deus ainda reina e de que Ele está vindo trazer Seu Reino para a Terra. Este vídeo explora como Jesus se via sendo esse mensageiro e o Rei."}
       />
 
       <Carousel
@@ -35,10 +35,6 @@ function Home() {
 
       <Carousel
         category={dadosIniciais.categorias[4]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
       />
 
       <Footer />
