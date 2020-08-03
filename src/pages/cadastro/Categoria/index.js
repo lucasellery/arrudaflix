@@ -12,6 +12,9 @@ function CadastroCategoria() {
     cor: '',
   };
 
+  // eslint-disable-next-line no-undef
+  const fieldId = `${descricao}`;
+
   const [categorias, setCategorias] = useState([]);
 
   // valor inicial que vai mudar conforme digitarmos.
@@ -62,14 +65,8 @@ function CadastroCategoria() {
             onChange={handleChange}
           />
 
-          {/* <FormField
-
-                        value={values.descricao}
-                        onChange={handleChange}
-                    /> */}
-
           <div>
-            <label htmlFor={}>
+            <label htmlFor={fieldId}>
               Descrição:
               <textarea
                 type="text"
