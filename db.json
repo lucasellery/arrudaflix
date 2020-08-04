@@ -1,0 +1,16 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Boa notícia",
+            "descricao": "Uma boa descrição",
+            "cor": "#cbd1ff"
+        },
+        {
+            "id": 2,
+            "nome": "Redenção",
+            "descricao": "Uma boa descrição para Redenção",
+            "cor": "#cbd1ff"
+        }
+    ]
+}

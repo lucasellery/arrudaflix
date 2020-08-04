@@ -12,9 +12,6 @@ function CadastroCategoria() {
     cor: '',
   };
 
-  // eslint-disable-next-line no-undef
-  const fieldId = `${descricao}`;
-
   const [categorias, setCategorias] = useState([]);
 
   // valor inicial que vai mudar conforme digitarmos.
@@ -65,17 +62,13 @@ function CadastroCategoria() {
             onChange={handleChange}
           />
 
-          <div>
-            <label htmlFor={fieldId}>
-              Descrição:
-              <textarea
-                type="text"
-                value={values.descricao}
-                name="descricao"
-                onChange={handleChange}
-              />
-            </label>
-          </div>
+          <FormField
+            label="Descrição"
+            type="textarea"
+            name="descricao"
+            value={values.descricao}
+            onChange={handleChange}
+          />
 
           <FormField
             label="Cor da Categoria"
@@ -84,18 +77,6 @@ function CadastroCategoria() {
             value={values.cor}
             onChange={handleChange}
           />
-
-          {/* <div>
-                        <label>
-                            Cor:
-                        <input
-                                type="color"
-                                value={values.cor}
-                                name="cor"
-                                onChange={handleChange}
-                            />
-                        </label>
-                    </div> */}
 
         </div>
 
@@ -107,9 +88,9 @@ function CadastroCategoria() {
       {/* O react não sabe lidar com obejtos completos como {categoria},
              logo, deve-se passar o algum atributo desse objeto também */}
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
-            {categoria.nome}
+        {categorias.map((categoria) => (
+          <li key={`${categoria.id}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
