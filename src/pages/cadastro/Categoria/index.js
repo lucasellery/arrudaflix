@@ -34,8 +34,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log('Hello Brazil');
-    const URL_TOP = 'http://localhost:8080/categorias';
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:3000/categoria'
+      : 'https://preachflix.herokuapp.com/';
     // retorna uma promisse
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
