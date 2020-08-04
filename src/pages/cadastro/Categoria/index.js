@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -33,11 +33,25 @@ function CadastroCategoria() {
     );
   }
 
+  useEffect(() => {
+    console.log('Hello Brazil');
+    const URL_TOP = 'http://localhost:8080/categorias';
+    // retorna uma promisse
+    fetch(URL_TOP)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
+  }, []);
+
   return (
     <PageDefault>
 
       <h1>
         Cadastro de Categoria:
+        {' '}
         {values.nome}
       </h1>
 
@@ -71,7 +85,7 @@ function CadastroCategoria() {
           />
 
           <FormField
-            label="Cor da Categoria"
+            label="Cor"
             type="color"
             name="cor"
             value={values.cor}
@@ -84,6 +98,12 @@ function CadastroCategoria() {
           Cadastrar
         </Button>
       </form>
+
+      {/* {categorias.length === 0 && (
+        <div>
+          Loading
+        </div>
+      )} */}
 
       {/* O react não sabe lidar com obejtos completos como {categoria},
              logo, deve-se passar o algum atributo desse objeto também */}

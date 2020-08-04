@@ -73,7 +73,6 @@ background: #53585D;
 function FormField({
   label, type, name, value, onChange,
 }) {
-
   const fieldId = `id_${name}`;
   const isTypeTextarea = type === 'textarea';
   const tag = isTypeTextarea ? 'textarea' : 'input';
